@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Booking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/train.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="bg-light py-3">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-4 d-flex align-items-center">
+                    <div class="travel-hub-logo-container">
+                        <img src="download__14_-removebg-preview.png" alt="Travel Hub Logo" class="img-fluid">
+                        <span class="travel-hub-text" onclick="refreshPage()">Travel Hub</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <nav class="d-flex justify-content-start">
+                        <ul class="nav">
+                            <li class="nav-item mx-2">
+                                <img src="https://www.abhibus.com/assets/svg/train.svg" alt="Train Logo" class="icon img-fluid">
+                                <a href="#" class="text-dark d-block">Trains</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <img src="https://www.abhibus.com/assets/svg/flight.svg" alt="Flight Logo" class="icon img-fluid">
+                                <a href="#" class="text-dark d-block">Flights</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <img src="https://www.abhibus.com/assets/svg/hotel.svg" alt="Hotel Logo" class="icon img-fluid">
+                                <a href="#" class="text-dark d-block">Hotels</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <img src="https://i.pinimg.com/736x/a0/24/25/a02425860e4433734102cdbfde346e1f.jpg" alt="Offers Logo" class="icon img-fluid">
+                                <a href="#" class="text-dark d-block">Offers</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <img src="https://i.pinimg.com/enabled_lo_mid/736x/60/6f/cf/606fcf646f2f1ab3c95fbb1ce1888064.jpg" alt="Contact Us Logo" class="icon img-fluid">
+                                <a href="#" class="text-dark d-block">Contact Us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-2 d-flex justify-content-end">
+                    <a href="#" class="btn btn-outline-primary mx-1">Login</a>
+                    <a href="#" class="btn btn-primary mx-1">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <div class="booking-form">
+            <h2>Train Booking</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="sourceStation">Source Station</label>
+                        <input list="stations" class="form-control" id="sourceStation" placeholder="Enter Source Station">
+                        <datalist id="stations">
+                            <!-- Major train stations in Andhra Pradesh (AP) -->
+                            <option value="Visakhapatnam Railway Station"></option>
+                            <option value="Vijayawada Junction"></option>
+                            <option value="Tirupati Railway Station"></option>
+                            <option value="Guntur Junction"></option>
+                            <option value="Nellore Railway Station"></option>
+                            <option value="Kakinada Port Railway Station"></option>
+                            <option value="Rajahmundry Railway Station"></option>
+                            <option value="Eluru Railway Station"></option>
+                            <option value="Ongole Railway Station"></option>
+    
+                            <!-- Major train stations in Telangana (TS) -->
+                            <option value="Hyderabad Deccan Nampally Railway Station"></option>
+                            <option value="Secunderabad Junction"></option>
+                            <option value="Kacheguda Railway Station"></option>
+                            <option value="Kazipet Junction"></option>
+                            <option value="Warangal Railway Station"></option>
+                            <option value="Karimnagar Railway Station"></option>
+                            <option value="Nizamabad Railway Station"></option>
+                            <option value="Adilabad Railway Station"></option>
+    
+                            <!-- Major train stations in India -->
+                            <option value="New Delhi Railway Station"></option>
+                            <option value="Mumbai Central Railway Station"></option>
+                            <option value="Chennai Central Railway Station"></option>
+                            <option value="Kolkata Howrah Junction"></option>
+                            <option value="Bangalore City Railway Station"></option>
+                            <option value="Ahmedabad Railway Station"></option>
+                            <option value="Pune Junction"></option>
+                            <option value="Lucknow Charbagh Railway Station"></option>
+                            <option value="Guwahati Railway Station"></option>
+                            <option value="Jaipur Railway Station"></option>
+                            <option value="Bhubaneswar Railway Station"></option>
+                            <option value="Coimbatore Junction"></option>
+                            <option value="Nagpur Railway Station"></option>
+                            <option value="Thiruvananthapuram Central Railway Station"></option>
+                        </datalist>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="destinationStation">Destination Station</label>
+                        <input list="stations" class="form-control" id="destinationStation" placeholder="Enter Destination Station">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="journeyDate">Journey Date</label>
+                        <input type="date" class="form-control" id="journeyDate">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="classOfTravel">Class of Travel</label>
+                        <select class="form-control" id="classOfTravel">
+                            <option>Sleeper</option>
+                            <option>3AC</option>
+                            <option>2AC</option>
+                            <option>1AC</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="numPassengers">Number of Passengers</label>
+                        <input type="number" class="form-control" id="numPassengers" placeholder="Enter Number of Passengers">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="preferredTrain">Preferred Train</label>
+                        <select class="form-control" id="preferredTrain">
+                            <option value="">Select a Preferred Train (Optional)</option>
+                            <option>12301 - Howrah Rajdhani Express</option>
+                            <option>12951 - Mumbai Rajdhani Express</option>
+                            <option>12002 - New Delhi Bhopal Shatabdi Express</option>
+                            <option>12401 - Magadh Express</option>
+                            <option>12625 - Kerala Express</option>
+                            <option>12273 - Howrah New Delhi Duronto Express</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+    </div>
+    
+        
+        <!-- Repeat the train-info div for more trains -->
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./scripts/home.js"></script>
+</body>
+</html>

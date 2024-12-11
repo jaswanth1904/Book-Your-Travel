@@ -1,0 +1,156 @@
+
+/* Custom styles */
+body::before {
+content: "";
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: url('https://i.pinimg.com/736x/9a/ca/0b/9aca0b93fc000459b49721f74baee879.jpg') no-repeat center center/cover;
+background-attachment: fixed;
+filter: blur(3px); /* Adjust the blur intensity as needed */
+z-index: -1;
+}
+
+.travel-hub-logo-container {
+position: absolute;
+top: -40px;
+left: 10px;
+display: flex;
+align-items: center;
+}
+
+.travel-hub-logo-container img {
+height: 80px;
+width: auto;
+margin-right: 10px;
+}
+
+.travel-hub-text {
+font-size: 24px;
+font-weight: bold;
+color: #ff0000;
+cursor: pointer;
+transition: color 0.3s ease;
+}
+
+.travel-hub-text:hover {
+color: #a61616;
+}
+
+/* Header styles */
+header {
+background-color: #41962a;
+padding: 10px 0;
+}
+
+.nav-item a {
+color: #000;
+text-align: center;
+display: block;
+transition: color 0.3s ease;
+margin-top: 5px;
+}
+
+.nav-item img {
+height: 24px;
+width: 24px;
+transition: transform 0.3s ease;
+}
+
+.nav-item:hover a {
+color: #007bff;
+}
+
+.nav-item:hover img {
+transform: scale(1.2);
+}
+
+.nav {
+flex-wrap: wrap;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+}
+
+.btn {
+transition: background-color 0.3s ease, color 0.3s ease;
+margin-left: 10px;
+}
+
+.btn-outline-primary:hover {
+background-color: #007bff;
+color: #fff;
+}
+
+.btn-primary:hover {
+background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.travel-hub-logo-container img {
+   height: 60px;
+}
+
+.travel-hub-text {
+   font-size: 18px;
+}
+
+.btn {
+   padding: 5px 10px;
+   font-size: 14px;
+}
+
+.nav {
+   justify-content: center;
+}
+
+.nav-item {
+   margin: 5px 0;
+}
+}
+/* Styles for the transparent module */
+.booking-form {
+background-color: rgba(37, 159, 70, 0.8); /* White with transparency */
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+position: relative;
+z-index: 1;
+}
+
+/* Ensure the input fields show suggestions below the input */
+input[list]::-webkit-calendar-picker-indicator {
+display: none; /* Hide the calendar icon in datalist */
+}
+
+/* Adjust input fields to show suggestions properly */
+#sourceStation, #destinationStation {
+position: relative;
+z-index: 2;
+}
+
+#stations {
+position: absolute;
+z-index: 1;
+background-color: white;
+border: 1px solid #ccc;
+max-height: 200px;
+overflow-y: auto;
+}
+
+/* Ensure the suggestions are displayed correctly */
+input::-webkit-input-placeholder {
+color: transparent;
+}
+
+input:focus::-webkit-input-placeholder {
+color: #999;
+}
+
+.form-control:focus + #stations option {
+display: block;
+}
+

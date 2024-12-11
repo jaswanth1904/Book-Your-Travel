@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.navbar-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    color: #333;
+    text-align: center;
+}
+.navbar-brand img {
+    width: 50px;  
+    height: auto; 
+}
+
+.flight-info-container {
+    padding: 50px 0;
+    background-color: #d72222;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #f8f9fa;
+}
+
+.flight-card {
+    background-color: #66fe00;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flight-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.flight-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.booking-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form .form-row {
+    margin-bottom: 20px;
+}
+
+.booking-form .form-group {
+    margin-bottom: 15px;
+}
+
+.booking-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background-color: #0056b3;
+}
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 10;
+}
+
+    </style>
+</head>
+<body>
+    <div class="background-image">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/023/942/832/small_2x/business-airplane-private-jet-at-sunset-illustration-generative-ai-photo.jpg" alt="Hotel Image" class="image">
+        </div>
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="data:image/png;base64,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" alt="Logo" class="icon"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+            </ul>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <span class="navbar-text" style="font-weight: bold; font-style: italic;">The sky is not the limit, it’s just the beginning.</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <section class="main-section">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h1>Millions of cheap flights. One simple search.</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-10">
+                    <form class="form-inline">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="from" class="sr-only">From</label>
+                            <select class="form-control" id="from">
+                                <option value="IGI">Indira Gandhi International Airport (Delhi)</option>
+                                <option value="CSMIA">Chhatrapati Shivaji Maharaj International Airport (Mumbai)</option>
+                                <option value="BLR">Kempegowda International Airport (Bengaluru)</option>
+                                <option value="CCU">Netaji Subhas Chandra Bose International Airport (Kolkata)</option>
+                                <option value="MAA">Chennai International Airport (Chennai)</option>
+                                <option value="HYD">Rajiv Gandhi International Airport (Hyderabad)</option>
+                                <option value="AMD">Sardar Vallabhbhai Patel International Airport (Ahmedabad)</option>
+                                <option value="PNQ">Pune International Airport (Pune)</option>
+                                <option value="JAI">Jaipur International Airport (Jaipur)</option>
+                                <option value="COK">Cochin International Airport (Kochi)</option>
+                                <option value="GOI">Goa International Airport (Dabolim)</option>
+                                <option value="IXE">Mangalore International Airport (Mangaluru)</option>
+                                <option value="BBI">Biju Patnaik International Airport (Bhubaneswar)</option>
+                                <option value="TRV">Trivandrum International Airport (Thiruvananthapuram)</option>
+                                <option value="LKO">Lucknow International Airport (Lucknow)</option>
+                                <option value="IXM">Madurai International Airport (Madurai)</option>
+                                <option value="SXR">Srinagar International Airport (Srinagar)</option>
+                                <option value="BDQ">Vadodara Airport (Vadodara)</option>
+                                <option value="STV">Surat International Airport (Surat)</option>
+                                <option value="IXC">Chandigarh International Airport (Chandigarh)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="to" class="sr-only">To</label>
+                            <select class="form-control" id="to">
+                                <option value="IGI">Indira Gandhi International Airport (Delhi)</option>
+                                <option value="CSMIA">Chhatrapati Shivaji Maharaj International Airport (Mumbai)</option>
+                                <option value="BLR">Kempegowda International Airport (Bengaluru)</option>
+                                <option value="CCU">Netaji Subhas Chandra Bose International Airport (Kolkata)</option>
+                                <option value="MAA">Chennai International Airport (Chennai)</option>
+                                <option value="HYD">Rajiv Gandhi International Airport (Hyderabad)</option>
+                                <option value="AMD">Sardar Vallabhbhai Patel International Airport (Ahmedabad)</option>
+                                <option value="PNQ">Pune International Airport (Pune)</option>
+                                <option value="JAI">Jaipur International Airport (Jaipur)</option>
+                                <option value="COK">Cochin International Airport (Kochi)</option>
+                                <option value="GOI">Goa International Airport (Dabolim)</option>
+                                <option value="IXE">Mangalore International Airport (Mangaluru)</option>
+                                <option value="BBI">Biju Patnaik International Airport (Bhubaneswar)</option>
+                                <option value="TRV">Trivandrum International Airport (Thiruvananthapuram)</option>
+                                <option value="LKO">Lucknow International Airport (Lucknow)</option>
+                                <option value="IXM">Madurai International Airport (Madurai)</option>
+                                <option value="SXR">Srinagar International Airport (Srinagar)</option>
+                                <option value="BDQ">Vadodara Airport (Vadodara)</option>
+                                <option value="STV">Surat International Airport (Surat)</option>
+                                <option value="IXC">Chandigarh International Airport (Chandigarh)</option>
+                            </select>
+                            <div class="container d-flex justify-content-center align-items-center">
+                                <div class="row">
+                                    <div class="col-12 col-md-8 col-lg-6">
+                                        <form class="form-inline justify-content-center">
+                                            <div class="form-group mx-sm-3 mb-2">
+                                                <label for="departure" class="sr-only">Depart</label>
+                                                <input type="date" class="form-control" id="departure">
+                                            </div>
+                                            <div class="form-group mx-sm-3 mb-2">
+                                                <label for="passengers" class="sr-only">Travellers</label>
+                                                <select class="form-control" id="passengers">
+                                                    <option>1 Adult, Economy</option>
+                                                    <option>2 Adults, Economy</option>
+                                                    <option>1 Adult, Business</option>
+                                                </select>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary mb-2">Search</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            
+    </section>
+<section class="flight-info-container">
+    <div class="container">
+        <h2 class="section-title">Available International Flights</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="flight-card">
+                    <h3>Flight A101</h3>
+                    <p><strong>From:</strong> New York (JFK)</p>
+                    <p><strong>To:</strong> London (LHR)</p>
+                    <p><strong>Departure:</strong> 10:00 AM</p>
+                    <p><strong>Arrival:</strong> 8:00 PM</p>
+                    <p><strong>Price:</strong> $500</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="flight-card">
+                    <h3>Flight B205</h3>
+                    <p><strong>From:</strong> Los Angeles (LAX)</p>
+                    <p><strong>To:</strong> Tokyo (NRT)</p>
+                    <p><strong>Departure:</strong> 12:00 PM</p>
+                    <p><strong>Arrival:</strong> 6:00 AM (Next Day)</p>
+                    <p><strong>Price:</strong> $750</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="flight-card">
+                    <h3>Flight C309</h3>
+                    <p><strong>From:</strong> Sydney (SYD)</p>
+                    <p><strong>To:</strong> Singapore (SIN)</p>
+                    <p><strong>Departure:</strong> 2:00 PM</p>
+                    <p><strong>Arrival:</strong> 7:00 PM</p>
+                    <p><strong>Price:</strong> $400</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Book Your Flight</h2>
+        <form class="booking-form">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="flight">Select Flight</label>
+                    <select id="flight" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>Flight A101</option>
+                        <option>Flight B205</option>
+                        <option>Flight C309</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="numPassengers">Number of Passengers</label>
+                    <input type="number" class="form-control" id="numPassengers" placeholder="Enter number of passengers">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+        </form>
+    </div>
+</section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

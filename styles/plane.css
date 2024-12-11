@@ -1,0 +1,101 @@
+
+        body {
+            background: url('https://imgak.mmtcdn.com/pwa_v3/pwa_commons_assets/desktop/bg7.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            padding-top: 50px;
+        }
+        header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Same background color as current */
+    z-index: 1000; /* Ensure the header stays on top of other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+body {
+    padding-top: 70px; /* Adjust this value based on the height of your header */
+}
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px 25px;
+            max-width: 1000px;
+            margin: 50px auto;
+            font-family: Arial, sans-serif;
+        }
+        .dropdown-list {
+            position: absolute;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 1000;
+            width: 100%;
+            display: none; /* Hidden initially */
+        }
+        .dropdown-item {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        .dropdown-item:hover {
+            background-color: #f1f1f1;
+        }
+
+        h4 {
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+
+        .form-check-label {
+            margin-right: 20px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .row .form-label {
+            font-weight: bold;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .form-control, .form-select {
+    height: auto; /* Ensure consistent input height */
+    padding: 10px; /* Add adequate padding */
+}
+
+
+        .btn-search {
+            width: 100%;
+            padding: 12px 0;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            background: #0078d4;
+            color: white;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-search:hover {
+            background-color: #005bb5;
+        }
+
+        .btn-outline-primary {
+            border-color: #0078d4;
+            color: #0078d4;
+            font-weight: bold;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #0078d4;
+            color: white;
+        }
+

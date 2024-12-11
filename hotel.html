@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Hub</title>
+    <link rel="stylesheet" href="./styles/hotel.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo" onclick="refreshPage()">Travel Hub</div>
+        <div class="icons">
+            <div class="icon">
+                <img src="https://www.abhibus.com/assets/svg/train.svg" alt="Train Logo">
+                <span>Trains</span>
+            </div>
+            <div class="icon">
+                <img src="https://www.abhibus.com/assets/svg/flight.svg" alt="Flight Logo">
+                <span>Flights</span>
+            </div>
+            <div class="icon">
+                <img src="https://www.abhibus.com/assets/svg/hotel.svg" alt="Hotel Logo">
+                <span>Hotels</span>
+            </div>
+            <div class="icon">
+                <img src="https://i.pinimg.com/736x/76/b5/62/76b562ab9ede4f7a2ddeb1c502850b8b.jpg" alt="Bus Logo">
+                <span>Buses</span>
+            </div>
+            <div class="icon">
+                <img src="https://i.pinimg.com/736x/46/22/59/46225951d3e23497bf932f77f072383a.jpg" alt="Login Logo">
+                <span>Login</span>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="search-bar">
+            <select id="location" required>
+                       <!-- Andhra Pradesh (AP) -->
+<option value="tirupati">Tirupati</option>
+<option value="visakhapatnam">Visakhapatnam</option>
+<option value="vijayawada">Vijayawada</option>
+<option value="amaravati">Amaravati</option>
+<option value="srikalahasti">Srikalahasti</option>
+<option value="rajahmundry">Rajahmundry</option>
+<option value="lepakshi">Lepakshi</option>
+<option value="anantapur">Anantapur</option>
+<option value="nellore">Nellore</option>
+<option value="kadapa">Kadapa</option>
+
+<!-- Telangana (TS) -->
+<option value="hyderabad">Hyderabad</option>
+<option value="warangal">Warangal</option>
+<option value="nizamabad">Nizamabad</option>
+<option value="karimnagar">Karimnagar</option>
+<option value="khammam">Khammam</option>
+<option value="nalgonda">Nalgonda</option>
+<option value="mahabubnagar">Mahabubnagar</option>
+<option value="adilabad">Adilabad</option>
+<option value="medak">Medak</option>
+<option value="rangareddy">Rangareddy</option>
+
+<!-- Famous Places in AP and TS -->
+<option value="charminar">Charminar</option>
+<option value="tirumala">Tirumala</option>
+<option value="araku">Araku Valley</option>
+<option value="golconda">Golconda Fort</option>
+<option value="ramoji">Ramoji Film City</option>
+<option value="kanaka_durga">Kanaka Durga Temple</option>
+<option value="ramappa">Ramappa Temple</option>
+<option value="kailasagiri">Kailasagiri</option>
+<option value="nagarjuna_sagar">Nagarjuna Sagar Dam</option>
+<option value="lepakshi">Lepakshi Temple</option>
+
+            </select>
+            <input type="date" id="checkin" required>
+            <input type="date" id="checkout" required>
+            <input type="text" id="guests" placeholder="Number of people" required>
+            <button type="submit" onclick="searchHotels()">Search Hotels</button>
+        </div>
+        <div class="hotel-cards" id="hotelCards"></div>
+    </main>
+
+    <script src="./scripts/hotel.js"></script>
+</body>
+</html>

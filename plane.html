@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/plane.css">
+</head>
+<body>
+    <header class="bg-light py-3">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-4 d-flex align-items-center">
+                    <h1 class="mb-0"><i class="fas fa-bus text-warning"></i> Travel<span class="text-danger">Hub</span></h1>
+                    <span class="ml-3 text-muted">Where the distination Begins</span>
+                </div>
+                <div class="col-md-8">
+                    <nav class="d-flex justify-content-start">
+                        <ul class="nav">
+                            <li class="nav-item mx-2">
+                                <img src="https://www.abhibus.com/assets/svg/train.svg" alt="Logo" class="icon">
+                                <a href="http://127.0.0.1:5500/train.html" class="text-dark">Trains</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <img src="https://www.abhibus.com/assets/svg/flight.svg" alt="Logo" class="icon">
+                                <a href="http://127.0.0.1:5500/flight.html" class="text-dark">Flights</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <img src="https://www.abhibus.com/assets/svg/hotel.svg" alt="Logo" class="icon">
+                                <a href="http://127.0.0.1:5500/hotel.html" class="text-dark">Hotels</a>
+                            <li class="nav-item mx-2">
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAoBJREFUSEvFlkuIjlEYx38jbNxiJ6XZuRTJrVBjSq5TZpLrxn1vZMNs5bZxWRNJzWRmMhqJ5BYh1wUWbCnZ0Cg2CO9fz9HrdM57zpf0ntX3ved5/v/z3J8majpNNfHSKHEb8A245j14FTAO6Mk1pBHiVuCWAT8G9gIjgf3AXPveAtzNIc8lHg68LCyakgB9Dcwwr1SKxojHANuACaY9HViXYwlwHnhlsh+AM8BnXzdGvAM4lUmUEttu5H/JxYi7gAMpxMz7fcDhXIslfDAA/MbcPzqTVGLZxCOAs8AmD3w3cMIyuRtYU7o/bUk1L/AgyW71E8539SKL7dQAwHhgyL4r0Xrt9yNAesOAk8DmgK6STXlz392ViZcDVyDaVNqBQVM8Vjyi0x4yswB9a554CMyKhOFnUeNLXC8oE6v7XK6I3Regr7BqkgHIwtXAJdM5DuxKxH4pcF0yvqvvFe1wYWbiiEhx15E3Lib0HpSxfeLZwNMMYrVMPfA70Fwk2nNATafqzCk89CwUY32bDyhOVecToLiqtFQBskSgqaOMfxIjVtYtSCCsBK42EFcHJ2xl/+/jZ7UDjHEfBfbYZQcwAPwAbgDvrbZHVTxcWX3TJ15rWRvT8+P6AlAHOwSoxeqssJIMYaicxHHBJ9b/qgaibrbTvFSO60abSNKfCLwLsFY2ECevhDkHbAgAyGrNZY1Md1RGIv9qfdkfLtpKtqRapgOLDYlYGDRvPwKTAwLZQ0K6tY3F2hYBf/WZBqxP1Le7/qfVx+dQwql8/vuyFzJuMXDbLtRWtd5qQh2x9VZ1qhX4To5nctdbh7UMGAv0e+BqDMrsVOf7o9YocY4xWTK1Ef8CfPd5H1dddocAAAAASUVORK5CYII=" alt="Logo" class="icon">
+                                    <a href="#" class="text-dark">Offers</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAA7xJREFUSEvFl3fIj2sYxz/IHp2yZcXhhMimKBIiK1mHhMg4ji0kOyMroyQzf8geGQkndLJHiMieiZAie7u/uh7dv9vveZ+fv1z1ej33te5rfa/7zcZvomy/yS+/6jg7UB+oAJSySz8EbgGnga+ZBpKp47+A4UBnoGiM8afAZmARcDPpAkmOCwPLgU5Jhjy+ot4CDAaexell5bgccAD405RlcDdw1vsRq4791APawI/yXQVaAA/SOY9zrHSeA0qb0n3gb+BEQuSNgPVAWU9PF3oS6qVznBM4ak0k+TXAMOCVKecDWlmDSf86sA94b/wCwBKgt32fdJlrDHz2nadzPBsYZ0Jy2tdTUPr3uBpWCyK4AHQA7nnn0u1j3zOBiVk5VorUkYpa6a0KvDaFXMA1oHxMum+bfBR5IeCKjd1HoJJ/sTDihcAIM6x6HfecTAMmu5t/AoYAG42nqKQnW5OAGZ5OM+CgfS8ARkc837H+/wgo7rrzjFfjSPYiUN3dfJ3LSs8g6k1AV+v2ugHvPFDTMqhSfSffsRrgiJ0LBEYGBt4BuYFZwISAp7PxLqKXgFLskxrtXztoYAiX4lidu9gEugBbAwOXrYZrgV4BT1no4ZDtkmXFZ3e3EdPZP8CyMGJ13XTTKJIGdYRgA2ys1On/maxGSx2cF1jqRRc5V8NG3a5pmRs6VmrVACItANXbp4KAoi4TnEefd4Ealm5fpKS7sBaJaJQ1YkqqlV6BvKitzWvoQ0ZWGjT6vG0uQ0PTXDayJagVaclINsVxQw8SNTZR2tMFWNmhW3Nj7HUodScmCzqe4v6ZanytVE1MiuM8rviPrSt3AB0DY9rFaiDNt0BENRW9dQilNB8GNFZfAr1dbszaOXx4bqP6IXSs79UGkRodgbu6VCTUUWQVs4hMrBtAa3sY6Fvze8qNoFBvhSvFwEg/RK4mwP/G1FqrDWgnaxUWs3PdWGASQWl+ayoZF2kT1XI48MLht8BDlxYJJ47FOdb5TrcS25uAbqmGUqpEgjyNjDLik8okHJhjh2oglSBCuO3hYyLddvrDIgrHRnM8KCHVq4B+gYxmWFArVPtBcQ+BKsAhhzIlPFl1cQT4cf5bAvs9prBA5VPtUyirp48aSfWOXiFa5CqDUEqG9KTJYWAj2f5WEnW/SJE2tY7/6aJJjz29NgRzY7zxScj299rOs3q/iRNOchzpKer5brF3S/C6ARgb98DLpMZx9oXXesxrr+q3SC8PAYh+R++ypKz88l8SiQYzFcg01Znay1juGzC8sh8i2SWvAAAAAElFTkSuQmCC" alt="Logo" class="icon">
+                                    <a href="#" class="text-dark">Login/SignUp</a>
+                                </li>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <!-- Trip Type Selection -->
+            <div class="mb-4">
+                <h4>Select Trip Type</h4>
+                <div class="d-flex">
+                    <label class="form-check-label">
+                        <input type="radio" name="tripType" checked> One Way
+                    </label>
+                    <label class="form-check-label">
+                        <input type="radio" name="tripType"> Round Trip
+                    </label>
+                    <label class="form-check-label">
+                        <input type="radio" name="tripType"> Multi-City
+                    </label>
+                </div>
+            </div>
+
+            <!-- From, To, Departure, Return, and Traveller Fields -->
+            <div class="row g-3 align-items-center">
+                <div class="col-md">
+                    <label for="fromLocation" class="form-label">From</label>
+                    <input type="text" class="form-control" id="fromLocation" placeholder="Enter origin city">
+                    <div class="dropdown-list" id="fromDropdown">
+                        <div class="dropdown-item">New York</div>
+                        <div class="dropdown-item">Los Angeles</div>
+                        <div class="dropdown-item">Chicago</div>
+                        <div class="dropdown-item">San Francisco</div>
+                        <div class="dropdown-item">Miami</div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <label for="toLocation" class="form-label">To</label>
+                    <input type="text" class="form-control" id="toLocation" placeholder="Enter destination city">
+                    <div class="dropdown-list" id="toDropdown">
+                        <div class="dropdown-item">London</div>
+                        <div class="dropdown-item">Paris</div>
+                        <div class="dropdown-item">Tokyo</div>
+                        <div class="dropdown-item">Sydney</div>
+                        <div class="dropdown-item">Dubai</div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <label for="departureDate" class="form-label">Departure</label>
+                    <input type="date" class="form-control" id="departureDate">
+                </div>
+                <div class="col-md">
+                    <label for="returnDate" class="form-label">Return</label>
+                    <input type="date" class="form-control" id="returnDate" disabled>
+                </div>
+                <div class="col-md">
+                    <label for="travellerClass" class="form-label">Traveller</label>
+                    <select class="form-select">
+                        <option>1 Traveller, Economy</option>
+                        <option>2 Travellers, Economy</option>
+                        <option>1 Traveller, Business</option>
+                    </select>
+                </div>
+            </div>
+            
+
+            <!-- Special Fare Section -->
+            <div class="my-4">
+                <h4>Select a Special Fare</h4>
+                <div class="d-flex flex-wrap gap-2">
+                    <button class="btn btn-outline-primary">Regular</button>
+                    <button class="btn btn-outline-primary">Student</button>
+                    <button class="btn btn-outline-primary">Senior Citizen</button>
+                    <button class="btn btn-outline-primary">Armed Forces</button>
+                    <button class="btn btn-outline-primary">Doctors and Nurses</button>
+                </div>
+            </div>
+
+            <!-- Search Button -->
+            <div class="text-center">
+                <button class="btn btn-search">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./scripts/plane.js"></script>
+</body>
+</html>

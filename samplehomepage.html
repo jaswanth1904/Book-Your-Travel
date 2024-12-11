@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Hub</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<link rel="stylesheet" href="./styles/home.css">
+</head>
+<body>
+    <header class="bg-light py-3">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-4 d-flex align-items-center">
+                    <div class="travel-hub-logo-container">
+                        <img src="Premium_Vector___Bus_vector-removebg-preview (1).png" alt="Travel Hub Logo" 
+                             class="travel-hub-logo">
+                        <span class="travel-hub-text" 
+                              onclick="refreshPage()">
+                            Travel Hub
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <nav class="d-flex justify-content-start">
+                        <ul class="nav">
+                            <li class="nav-item mx-2">
+                                <img src="https://i.pinimg.com/736x/bf/dd/3f/bfdd3f19d3b9d9f8bc27be2496380d9f.jpg" alt="Train Logo" class="icon img-fluid">
+                                <a href="http://127.0.0.1:5500/train.html" class="text-dark d-block">Trains</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <img src="https://i.pinimg.com/736x/3d/f6/d7/3df6d7cc4159fc5fb9ed89ee2e5cce97.jpg" alt="Flight Logo" class="icon img-fluid">
+                                <a href="http://127.0.0.1:5500/plane.html" class="text-dark d-block">Flights</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <img src="https://i.pinimg.com/736x/c7/f3/ff/c7f3ff66dc37662acfa239263f1dce1a.jpg" alt="Hotel Logo" class="icon img-fluid">
+                                <a href="http://127.0.0.1:5500/hotel.html" class="text-dark d-block">Hotels</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAoBJREFUSEvFlkuIjlEYx38jbNxiJ6XZuRTJrVBjSq5TZpLrxn1vZMNs5bZxWRNJzWRmMhqJ5BYh1wUWbCnZ0Cg2CO9fz9HrdM57zpf0ntX3ved5/v/z3J8majpNNfHSKHEb8A245j14FTAO6Mk1pBHiVuCWAT8G9gIjgf3AXPveAtzNIc8lHg68LCyakgB9Dcwwr1SKxojHANuACaY9HViXYwlwHnhlsh+AM8BnXzdGvAM4lUmUEttu5H/JxYi7gAMpxMz7fcDhXIslfDAA/MbcPzqTVGLZxCOAs8AmD3w3cMIyuRtYU7o/bUk1L/AgyW71E8539SKL7dQAwHhgyL4r0Xrt9yNAesOAk8DmgK6STXlz392ViZcDVyDaVNqBQVM8Vjyi0x4yswB9a554CMyKhOFnUeNLXC8oE6v7XK6I3Regr7BqkgHIwtXAJdM5DuxKxH4pcF0yvqvvFe1wYWbiiEhx15E3Lib0HpSxfeLZwNMMYrVMPfA70Fwk2nNATafqzCk89CwUY32bDyhOVecToLiqtFQBskSgqaOMfxIjVtYtSCCsBK42EFcHJ2xl/+/jZ7UDjHEfBfbYZQcwAPwAbgDvrbZHVTxcWX3TJ15rWRvT8+P6AlAHOwSoxeqssJIMYaicxHHBJ9b/qgaibrbTvFSO60abSNKfCLwLsFY2ECevhDkHbAgAyGrNZY1Md1RGIv9qfdkfLtpKtqRapgOLDYlYGDRvPwKTAwLZQ0K6tY3F2hYBf/WZBqxP1Le7/qfVx+dQwql8/vuyFzJuMXDbLtRWtd5qQh2x9VZ1qhX4To5nctdbh7UMGAv0e+BqDMrsVOf7o9YocY4xWTK1Ef8CfPd5H1dddocAAAAASUVORK5CYII=" alt="Offers Logo" class="icon img-fluid">
+                                <a href="#" class="text-dark d-block">Offers</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <img src="https://i.pinimg.com/736x/46/22/59/46225951d3e23497bf932f77f072383a.jpg" alt="Signup / Login" class="icon img-fluid">
+                                <a href="http://127.0.0.1:5500/sign.html" class="text-dark d-block">Login / Signup </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<section class="search-section">
+    <div class="container text-center">
+        <h2 class="mb-5" style="font-size: 28px; font-weight: bold; color: #ffffff; font-style: italic; text-shadow: 2px 2px 4px rgb(0, 0, 0);">BOOK BUS TICKETS</h2> 
+        <br>
+               <div class="search-box d-flex justify-content-center flex-wrap">
+            <input list="from-stations" class="form-control mx-2" placeholder="From Station">
+            <datalist id="from-stations">
+                <datalist id="from-stations">
+                    <option value="Hyderabad (TS)"></option>
+                    <option value="Visakhapatnam (AP)"></option>
+                    <option value="Vijayawada (AP)"></option>
+                    <option value="Warangal (TS)"></option>
+                    <option value="Guntur (AP)"></option>
+                    <option value="Nizamabad (TS)"></option>
+                    <option value="Nellore (AP)"></option>
+                    <option value="Kurnool (AP)"></option>
+                    <option value="Khammam (TS)"></option>
+                    <option value="Rajahmundry (AP)"></option>
+                    <option value="Karimnagar (TS)"></option>
+                    <option value="Kakinada (AP)"></option>
+                    <option value="Ramagundam (TS)"></option>
+                    <option value="Tirupati (AP)"></option>
+                    <option value="Mahbubnagar (TS)"></option>
+                    <option value="Anantapur (AP)"></option>
+                    <option value="Nalgonda (TS)"></option>
+                    <option value="Ongole (AP)"></option>
+                    <option value="Adilabad (TS)"></option>
+                    <option value="Suryapet (TS)"></option>
+                  </datalist>
+                <!-- Add stations here -->
+            </datalist>
+            <button id="swapButton" class="btn btn-primary">
+                <i class="fas fa-exchange-alt"></i>
+            </button>
+            <input list="to-stations" class="form-control mx-2" placeholder="To Station">
+            <datalist id="to-stations">
+                <datalist id="from-stations">
+                    <option value="Hyderabad (TS)"></option>
+                    <option value="Visakhapatnam (AP)"></option>
+                    <option value="Vijayawada (AP)"></option>
+                    <option value="Warangal (TS)"></option>
+                    <option value="Guntur (AP)"></option>
+                    <option value="Nizamabad (TS)"></option>
+                    <option value="Nellore (AP)"></option>
+                    <option value="Kurnool (AP)"></option>
+                    <option value="Khammam (TS)"></option>
+                    <option value="Rajahmundry (AP)"></option>
+                    <option value="Karimnagar (TS)"></option>
+                    <option value="Kakinada (AP)"></option>
+                    <option value="Ramagundam (TS)"></option>
+                    <option value="Tirupati (AP)"></option>
+                    <option value="Mahbubnagar (TS)"></option>
+                    <option value="Anantapur (AP)"></option>
+                    <option value="Nalgonda (TS)"></option>
+                    <option value="Ongole (AP)"></option>
+                    <option value="Adilabad (TS)"></option>
+                    <option value="Suryapet (TS)"></option>
+                  </datalist>
+                <!-- Add stations here -->
+            </datalist>
+            <input type="date" class="form-control mx-2" id="btn-date" 
+             min="2024-11-01" 
+             max="2025-12-31">
+            <button class="btn btn-light mx-2" id="btn-pad">Today</button>
+            <button class="btn btn-light mx-2" id="btn-pad">Tomorrow</button>
+            <br>
+
+            <button class="btn btn-danger mx-2" id="btn-pad">
+                <a href="http://127.0.0.1:5500/Bussearch.html" style="text-decoration: none; color: white;">Search</a>
+              </button>
+        </div>
+    </div>
+    
+    <section class="popular-routes-section py-5">
+        <div class="container text-center">
+            <h3 class="mb-5" style="font-size: 28px; font-weight: bold; color: #ffffff; font-style: italic; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">POPULAR BUS ROUTES</h3>
+            <hr style="border: none; border-top: 2px solid #ffffff; margin: 20px 0;">
+                        <div class="row">
+                
+                <div class="col-md-4 mb-4">
+                    <div class="route-card shadow-lg rounded">
+                        <img src="https://i.pinimg.com/736x/ac/ac/18/acac18728f8f59be74336659804c8772.jpg" alt="Vijayawada" class="img-fluid rounded-top">
+                        <div class="route-info p-3">
+                            <h4 class="text-primary">Vijayawada</h4>
+                            <p class="text-muted">To: Hyderabad, Vizag, Tirupati, Nellore, Kanigiri, Kurnool, Amaravathi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="route-card shadow-lg rounded">
+                        <img src="https://i.pinimg.com/736x/72/c9/bc/72c9bc7cc3bdfe084252528d2be996a2.jpg" alt="Hyderabad" class="img-fluid rounded-top">
+                        <div class="route-info p-3">
+                            <h4 class="text-primary">Hyderabad</h4>
+                            <p class="text-muted">To: Tirupati, Nellore, Kanigiri, Kurnool, Amaravathi, Rajahmundry, Vizag</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="route-card shadow-lg rounded">
+                        <img src="https://i.pinimg.com/736x/43/4e/4a/434e4af3cd87fd0a9d065d0340b35d57.jpg" alt="VIzag" class="img-fluid rounded-top">
+                        <div class="route-info p-3">
+                            <h4 class="text-primary">VIzag</h4>
+                            <p class="text-muted">To: Kanigiri, Kurnool, Amaravathi, Rajahmundry, Tirupati, Nellore</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="route-card shadow-lg rounded">
+                        <img src="https://i.pinimg.com/736x/c6/de/8f/c6de8f07abf9b4504f5ac49b57842249.jpg" alt="Tirupati" class="img-fluid rounded-top">
+                        <div class="route-info p-3">
+                            <h4 class="text-primary">Tirupati</h4>
+                            <p class="text-muted">To: Kurnool, Amaravathi, Hyderabad, Vizag, Rajahmundry, Nellore, Kanigiri</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="route-card shadow-lg rounded">
+                        <img src="https://i.pinimg.com/736x/46/68/0a/46680a5526da250c35ecd1eb3ce95c6f.jpg" alt="Nellore" class="img-fluid rounded-top">
+                        <div class="route-info p-3">
+                            <h4 class="text-primary">Nellore</h4>
+                            <p class="text-muted">To: Kanigiri, Kurnool, Amaravathi, Hyderabad, Vizag, Tirupati, Rajahmundry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="route-card shadow-lg rounded">
+                        <img src="kanigiri.jpg" alt="Kanigiri" class="img-fluid rounded-top">
+                        <div class="route-info p-3">
+                            <h4 class="text-primary">Kanigiri</h4>
+                            <p class="text-muted">To: Hyderabad, Vizag, Tirupati, Rajahmundry, Kurnool, Amaravathi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="route-card shadow-lg rounded">
+                        <img src="https://i.pinimg.com/736x/83/da/73/83da73dd977bd383d460e92557e75178.jpg" alt="Kurnool" class="img-fluid rounded-top">
+                        <div class="route-info p-3">
+                            <h4 class="text-primary">Kurnool</h4>
+                            <p class="text-muted">To: Hyderabad, Vizag, Tirupati, Rajahmundry, Nellore, Kanigiri, Amaravathi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="route-card shadow-lg rounded">
+                        <img src="https://i.pinimg.com/736x/8d/15/87/8d158775e6d93ec368e519a3fefac131.jpg" alt="Amaravathi" class="img-fluid rounded-top">
+                        <div class="route-info p-3">
+                            <h4 class="text-primary">Amaravathi</h4>
+                            <p class="text-muted">To: Tirupati, Nellore, Kanigiri, Kurnool, Hyderabad, Vizag, Rajahmundry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="route-card shadow-lg rounded">
+                        <img src="https://i.pinimg.com/736x/2d/31/81/2d3181aac41e1cb8a5972b0e3cf58266.jpg" alt="Rajahmundry" class="img-fluid rounded-top">
+                        <div class="route-info p-3">
+                            <h4 class="text-primary">Rajahmundry</h4>
+                            <p class="text-muted">To: Kurnool, Amaravathi, Hyderabad, Vizag, Tirupati, Rajahmundry, kanigiri</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box p-4 mb-4">
+                        <h2 class="text-center">Why Choose TravelHub for Bus Ticket Booking?</h2>
+                        <p>TravelHub is a wonderful platform for all bus travelers. Whether you are planning to travel to HYD or TRIRUPATHI, you can discover your favorite place through luxury and budgeted buses including sleeper, AC/NON-AC, Volvo, semi-sleeper, and room.</p>
+                        <p>Our easy to use platform provides a hassle-free booking experience and you too can opt for bus booking online at TravelHub and ditch long queues for bus tickets. Booking bus tickets online has never been this easy, but with TravelHub's simple user interface, you can book bus tickets within a few clicks. Choose from 3999+ bus operators and book bus tickets online from the comfort of your home. Download the TravelHub app to book flight tickets, train tickets, and bus tickets at the lowest prices seamlessly.</p>
+                    </div>
+                    <div class="box p-4 mb-4">
+                        <h3 class="text-center mt-4">Book Your Bus Ticket with Us</h3>
+                        <p>Who doesn’t love exploring places by road? The captivating landscapes that are seen on both sides of the bus are the sights to behold. Travelers who love to explore places by road can choose online bus booking at EaseMyTrip and also save huge money. Why would you go out and look for a travel agency to book a tour bus when you can do it by yourself? It takes less than a minute to book a bus ticket at EaseMyTrip. The simple interface, easy navigation, and fast speed of the portal allow you to book a bus to your favorite destination within a few seconds.</p>
+                        <p>Whether you want to travel via AC/Non-AC bus, semi-sleeper bus, smart bus, deluxe bus, luxury bus, budgeted bus, or Volvo bus booking EaseMyTrip has got everything covered for you. Enjoy a hassle-free booking experience at EaseMyTrip and discover your favorite place. There are around 3999+ bus operators for online bus ticket booking at this portal, choose the best one that suits your bus ticket booking demand and enjoy your bus journey like never before!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container my-5">
+                <div class="row text-center my-5">
+                    <div class="col-md-3">
+                        <div class="box p-4 mb-4">
+                            <div class="image-container">
+                                <img src="https://i.pinimg.com/736x/dd/72/13/dd7213770ced500e719464c5053e88d3.jpg" alt="Lowest Ticket Charges" class="img-fluid mb-3">
+                            </div>
+                            <h4>Lowest Ticket Charges</h4>
+                            <p>Grab huge discounts and cashbacks on your bus booking with EaseMyTrip.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="box p-4 mb-4">
+                            <div class="image-container">
+                                <img src="https://i.pinimg.com/736x/e3/e8/a8/e3e8a8d6bd5f60dac8ce52c7166b1315.jpg" alt="3999+ Bus Operators" class="img-fluid mb-3">
+                            </div>
+                            <h4>3999+ Bus Operators</h4>
+                            <p>Leverage our partnerships with over 3999 bus operators for a hassle-free journey.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="box p-4 mb-4">
+                            <div class="image-container">
+                                <img src="https://i.pinimg.com/736x/c8/ac/65/c8ac654b11daf4b29daf2febf168b06d.jpg" alt="Seamless Booking" class="img-fluid mb-3">
+                            </div>
+                            <h4>Seamless Booking</h4>
+                            <p>Our user-friendly platform makes it easy for customers to book their bus tickets.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="box p-4 mb-4">
+                            <div class="image-container">
+                                <img src="https://i.pinimg.com/736x/08/1c/4f/081c4fb07629e5ba22524e822a4ac4fe.jpg" alt="Trusted by 20K+ Users" class="img-fluid mb-3">
+                            </div>
+                            <h4>Trusted by 20K+ Users</h4>
+                            <p>20K+ users have trusted and enjoyed our seamless bus booking service.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-section">
+                <h2 class="faq-title">FAQs related to Bus Tickets Booking</h2>
+                <div class="faq-category">
+                    <h3 class="category-title">General</h3>
+                    <div class="faq-item">
+                        <button class="faq-toggle">Can I track the location of my booked bus online?</button>
+                        <div class="faq-answer">
+                            <p>Yes, you can track the location of your booked bus online using the TravelHub tracking feature.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-toggle">What are the advantages of purchasing a bus ticket with TravelHub?</button>
+                        <div class="faq-answer">
+                            <p>Purchasing a bus ticket with redBus offers advantages such as convenience, discounts, and real-time tracking.</p>
+                        </div>
+                    </div>
+                    <!-- Add more FAQ items as needed -->
+                </div>
+                <div class="faq-category">
+                    <h3 class="category-title">Ticket-related</h3>
+                    <div class="faq-item">
+                        <button class="faq-toggle">Why book bus tickets online on TravelHub?</button>
+                        <div class="faq-answer">
+                            <p>Booking bus tickets online on TravelHub is convenient, offers discounts, and provides real-time tracking.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-toggle">Do I need to create an account on the redBus site to book my bus ticket?</button>
+                        <div class="faq-answer">
+                            <p>No, you do not need to create an account to book a bus ticket on TravelHub sign in page.</p>
+                        </div>
+                    </div>
+                    <!-- Add more FAQ items as needed -->
+                </div>
+                <div class="faq-category">
+                    <h3 class="category-title">Payment</h3>
+                    <div class="faq-item">
+                        <button class="faq-toggle">Does bus booking online cost me more?</button>
+                        <div class="faq-answer">
+                            <p>No, booking bus tickets online does not cost more. In fact, you may find discounts and offers.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-toggle">How can I get the discounts on the bus booking?</button>
+                        <div class="faq-answer">
+                            <p>You can get discounts on bus bookings by applying promo codes or using special offers available on TravelHub.</p>
+                        </div>
+                    </div>
+                    <!-- Add more FAQ items as needed -->
+                </div>
+                <div class="faq-category">
+                    <h3 class="category-title">Cancellation & Refund</h3>
+                    <div class="faq-item">
+                        <button class="faq-toggle">What's New in Bus Booking on TravelHub?</button>
+                        <div class="faq-answer">
+                            <p>New features in bus booking on redBus include enhanced tracking, more payment options, and improved user interface.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-toggle">Can I book a Government bus ticket on TravelHub?</button>
+                        <div class="faq-answer">
+                            <p>Yes, you can book Government bus tickets on TravelHUb.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- Adding the new section -->
+             <div class="bus-routes-section">
+    <div class="bus-routes-header">
+        Andhra Pradesh and Telangana Bus Routes
+    </div>
+    <div class="bus-routes-content">
+        <div class="bus-route-column">
+            <h4>Andhra Pradesh</h4>
+            <ul>
+                <li>Visakhapatnam</li>
+                <li>Vijayawada</li>
+                <li>Guntur</li>
+                <li>Nellore</li>
+                <li>Kurnool</li>
+                <li>Kadapa</li>
+                <li>Tirupati</li>
+            </ul>
+        </div>
+        <div class="bus-route-column">
+            <h4>Telangana</h4>
+            <ul>
+                <li>Hyderabad</li>
+                <li>Warangal</li>
+                <li>Nizamabad</li>
+                <li>Khammam</li>
+                <li>Karimnagar</li>
+                <li>Ramagundam</li>
+                <li>Mahbubnagar</li>
+            </ul>
+        </div>
+        <div class="bus-route-column">
+            <h4>Top RTC Buses</h4>
+            <ul>
+                <li>APSRTC</li>
+                <ul>
+                    <li>Garuda Plus</li>
+                    <li>Amaravati</li>
+                    <li>Vennela</li>
+                    <li>Super Luxury</li>
+                    <li>Ultra Deluxe</li>
+                </ul>
+                <li>TSRTC</li>
+                <ul>
+                    <li>Vajra</li>
+                </ul>
+            </ul>
+        </div>
+        <div class="bus-route-column">
+            <h4>Top Bus Services</h4>
+            <ul>
+                <li>APSRTC</li>
+                <li>TSRTC</li>
+                <li>Panduluuu Travels</li>
+                <li>Jashu Tours and Travels</li>
+                <li>BHAI & Travels</li>
+                <li>Sandy Travels</li>
+                <li>JAGAN Travels</li>
+            </ul>
+        </div>
+    </div>
+</div>
+            
+    </section>
+<script src="./scripts/home.js"></script>

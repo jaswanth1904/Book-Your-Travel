@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #25577a;
+        }
+
+        header {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .search-box {
+            background-color: white;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .search-box h2 {
+            margin-top: 0;
+        }
+
+        .search-box select, .search-box button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .search-box button {
+            background-color: #f44336;
+            color: white;
+            cursor: pointer;
+        }
+
+        .search-box button:hover {
+            background-color: #c62828;
+        }
+
+        .footer {
+            background-color: #f44336;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .warning {
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .search-box h2 {
+    color: #faf3ef;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>blooddonation.org</h1>
+        <p>Become a superhero with a simple act of blood donation.</p>
+    </header>
+
+    <div class="container">
+        <div class="search-box">
+          <h2 class="title">Find Blood Donors</h2>
+
+            <form>
+                <label for="blood-group">Blood Group</label>
+                <select id="blood-group" name="blood-group">
+                    <option value="">---Select---</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+
+                <label for="country">Select Country</label>
+                <select id="country" name="country">
+                    <option value="">---Select---</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                </select>
+
+                <label for="state">Select State</label>
+                <select id="state" name="state">
+                    <option value="">---Select---</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Karnataka">Karnataka</option>
+                </select>
+
+                <label for="district">Select District</label>
+                <select id="district" name="district">
+                    <option value="">---Select---</option>
+                    <option value="District 1">District 1</option>
+                    <option value="District 2">District 2</option>
+                    <option value="District 3">District 3</option>
+                </select>
+
+                <label for="city">Select City</label>
+                <select id="city" name="city">
+                    <option value="">---Select---</option>
+                    <option value="">---Select---</option>
+                    <option value="City 1">Visakhapatnam</option>
+                    <option value="City 2">Vijawada</option>
+                    <option value="City 3">Guntur</option>
+                    <option value="City 1">Nellore</option>
+                      
+                    <option value="City 2">Kurnool</option>
+                      
+                    <option value="City 3">Kakinada</option>
+                      
+                    <option value="City 1">Rajamahendravaram</option>
+                  
+                    <option value="City 2">Kadapa></option>
+                    <option value="City 3">Mangalagiri-Tadepalli</option>
+                      
+                    <option value="City 1">Tirupati</option>
+                      
+                    <option value="City 2">Anantapuram</option>
+                     
+                    <option value="City 3"> Ongole </option>
+                      
+                      <option value="City 2"> Vizianagaram</option>
+                        
+                        <option value="City 3">Eluru</option>
+                        
+                        <option value="City 1">Proddatur</option>
+                          
+                        <option value="City 2">Nandyal</option>
+                         
+                        <option value="City 3"> Adoni</option>
+                          <option value="City 3">Madanapalle</option>
+                        
+                            <option value="City 1">Machilipatnam</option>
+                              
+                            <option value="City 2">Tenali</option>
+   
+                            <option value="City 3"> Hindupur</option>                       
+                              <option value="City 1">Srikakulam</option>
+                                
+                              <option value="City 2">Bhimavaram</option>
+                    
+                </select>
+
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <div class="warning">
+            <p>Saving a life is priceless. Donate blood.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Once a blood donor, forever a life saver</p>
+    </footer>
+</body>
+</html>

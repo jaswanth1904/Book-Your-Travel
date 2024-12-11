@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+   <link rel="stylesheet" href="./styles/login.css">
+</head>
+<body>
+    </div>   
+    <div class="image-container">
+        <img src="Compass_Mountain_logo_vintage_vector_illustration_template_icon_graphic_design-removebg-preview.png" alt="Description of image">
+        <p><i>"Journey Beyond Limits: All Your Travel Needs in One Hub."</i>.</p>
+    </div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="#" method="post">
+            <div class="form-group" >
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required onblur="checkUsername()">
+                <small id="username-error" style="color: white; display: none;">Username cannot be empty</small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required onblur="checkPassword()">
+                <small id="password-error" style="color: white; display: none;">Password cannot be empty</small>
+            </div>
+            <button type="submit" >Login</button>
+            <p>Don't have an account? <a href="sign.html">Sign up</a></p>
+        </form>
+    </div>
+    <script src="./scripts/registration.js"></script>
+</body>
+</html> 

@@ -1,0 +1,296 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background: url('https://img.freepik.com/premium-photo/classic-bus-road_756748-1050.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: rgb(248, 236, 236);
+    backdrop-filter: blur(5px);
+}
+.travel-hub-text {
+font-size: 30px;
+font-weight: 700;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+color: #fdfdfd;
+position: absolute;
+top: 10px;
+left: 10px;
+cursor: pointer;
+transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.travel-hub-text:hover {
+color: #ff1100;
+transform: scale(1.1);
+}
+
+.header {
+background-color: #ffffff; 
+color: #333; /* Adjust text color for contrast */
+padding: 10px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.filters {
+    flex: 1;
+    padding: 20px;
+    background-color: #e8e2e2;
+    border-right: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+}
+
+.filter-section h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.filter-group input[type="radio"],
+.filter-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.filter-group input[type="range"] {
+    width: 100%;
+}
+
+.bus-list {
+    flex: 3;
+    padding: 20px;
+}
+
+.bus-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.bus-item:hover {
+    transform: scale(1.02);
+}
+
+.bus-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.bus-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.bus-time-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #777;
+}
+
+.bus-fare {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.bus-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.bus-amenities {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.amenity {
+    flex: 1 1 calc(33.333% - 10px);
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.amenity i {
+    margin-right: 5px;
+    color: #000000;
+}
+
+.bus-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bus-reviews {
+    display: flex;
+    align-items: center;
+}
+
+.rating {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000000;
+    margin-right: 5px;
+}
+
+.reviews {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.view-seats-btn {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-seats-btn:hover {
+    background-color: #ff0000;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .filters {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .bus-details,
+    .bus-amenities {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+nav {
+display: flex;
+justify-content: center;
+}
+
+.nav {
+display: flex;
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.nav-item {
+display: flex;
+align-items: center;
+margin: 0 1rem;
+text-align: center;
+}
+
+.nav-item .icon {
+height: 40px;
+width: auto;
+margin-bottom: 0.5rem;
+transition: transform 0.3s ease;
+}
+
+.nav-item:hover .icon {
+transform: scale(1.1);
+}
+
+.nav-item a {
+color: #ffffff;
+text-decoration: none;
+font-size: 16px;
+font-weight: 500;
+transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+color: #ff0000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.travel-hub-logo-container img {
+height: 60px;
+}
+
+.travel-hub-text {
+font-size: 18px;
+left: 80px;
+}
+
+.nav-item {
+margin: 0 0.5rem;
+}
+
+.nav-item .icon {
+height: 30px;
+}
+
+.nav-item a {
+font-size: 14px;
+}
+}

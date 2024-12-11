@@ -1,0 +1,572 @@
+
+    /* styles.css */
+
+/* Container styles */
+.header-container {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+}
+
+.header-col {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.nav-item a {
+    color: #343a40;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-item a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.travel-hub-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.travel-hub-logo {
+    width: 50px;
+    height: auto;
+}
+
+.travel-hub-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item img {
+    margin-right: 5px;
+}
+
+
+.travel-hub-text {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: cursive;
+    color: #99665f;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .travel-hub-logo {
+        height: 40px;
+    }
+    .travel-hub-text {
+        font-size: 18px;
+    }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://i.pinimg.com/736x/6f/65/be/6f65be65df7d422493344a00b97ad6cb.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  color: rgb(248, 236, 236);
+  backdrop-filter: blur(5px);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure header stays above other content */
+    background-color: rgb(255, 21, 0); /* Optional: semi-transparent background */
+    box-shadow: 0 4px 6px rgba(225, 7, 7, 0.1); /* Optional: add a subtle shadow */
+    padding: 15px 0;
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+header span {
+    font-size: 14px;
+}
+
+header nav a {
+    text-decoration-color: #ddd;
+    color: #ff0000;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    color: #110df0;
+}
+.container text center
+
+.search-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.search-section h2 {
+    margin-bottom: 20px;
+}
+
+.search-box {
+    background: rgba(255, 0, 0, 0.721);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.search-box input, .search-box button {
+    font-size: 16px;
+}
+
+.search-box i {
+    font-size: 20px;
+}
+
+
+#btn-pad{
+    margin-top: 10px;
+}
+
+#btn-date {
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+}
+
+.icon {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.icon:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+.nav-item {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 30px;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  transform: translateY(-5px);
+}
+
+.nav-item.active {
+  border-bottom: 2px solid #000000;
+}
+
+@media (max-width: 768px) {
+  .nav-item {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-item {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+.route-card {
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .route-card:hover {
+        transform: scale(1.05);
+    }
+
+    .route-info h4 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .route-info p {
+        font-size: 16px;
+        color: #f90000;
+    }
+
+    .btn-lg {
+        padding: 12px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    @media (max-width: 767px) {
+        .route-card {
+            margin-bottom: 20px;
+        }
+
+        .route-info h4 {
+            font-size: 18px;
+        }
+
+        .route-info p {
+            font-size: 14px;
+        }
+    }
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+    header h1 {
+        font-size: 20px;
+    }
+    .search-section h2 {
+        font-size: 22px;
+    }
+    .search-box input, .search-box button {
+        font-size: 14px;
+    }
+    .offer img {
+        max-width: 100%;
+    }
+    .offers-section .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .offer {
+        width: 48%;
+        margin-bottom: 15px;
+    }
+}
+
+@keyframes arrowUpDown {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animated-arrow:hover {
+    animation: arrowUpDown 0.5s forwards;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2, h3, h4 {
+    color: #ff0000;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.my-5 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
+
+.box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+    width: 100%;
+    height: 200px; /* Set the height you want for all images */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image covers the container without distortion */
+}
+
+.faq-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+}
+
+.faq-item {
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.faq-item:hover {
+    background-color: #ff0000;
+    color: #fff;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.faq-section {
+    max-width: 1500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Added border radius for rectangular shape */
+}
+
+.faq-title {
+    font-size: 24px;
+    color: rgb(255, 0, 0);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.faq-category {
+    margin-bottom: 20px;
+}
+
+.category-title {
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-toggle {
+    background: none;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+}
+
+.faq-toggle::after {
+    content: '+';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+.footer-section {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ff6347; /* Change color on hover */
+}
+
+.footer-bottom {
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    color: #666;
+}
+.bus-routes-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.bus-routes-header {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bus-routes-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bus-route-column {
+    flex-basis: 23%;
+    padding: 20px;
+    margin: 10px;
+    background-color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.bus-route-column:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.bus-route-column h4 {
+    margin-top: 0;
+}
+
+.bus-route-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bus-route-column li {
+    margin-bottom: 10px;
+}
+
+.bus-route-column a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+.bus-route-column a:hover {
+    color: #23527c;
+}
+
+/* Responsive design */
+
+@media only screen and (max-width: 768px) {
+    .bus-routes-content {
+        flex-direction: column;
+    }
+    .bus-route-column {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .bus-route-column {
+        padding: 10px;
+    }
+    .bus-route-column h4 {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Hub</title>
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #15b53d;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-item {
+            margin-right: 20px;
+        }
+
+        .nav-item img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .nav-item a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .search-section {
+            background-color: #ff0000;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .Search_headerCmp__main__TxKrk {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .styles_FswFld__UzC_6 {
+            background-color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 12px;
+            width: 285px;
+        }
+
+        .styles_FswFldTitle__0nABI {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .appendTop16 {
+            margin-top: 16px;
+        }
+
+        .filter-results-section {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .filter-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 30%;
+        }
+
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-option {
+            margin-bottom: 10px;
+        }
+
+        .filter-option input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .filter-option label {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .clear-button {
+            background-color: #EB6125;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            font-size: 12px;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .train-results-section {
+            padding: 20px;
+            width: 68%;
+        }
+
+        .train-results {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .train-result {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: calc(33.33% - 20px);
+        }
+
+        .train-result h5 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .train-result p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .book-now {
+            background-color: #EB6125;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #d61818;
+            cursor: pointer;
+        }
+
+        .book-now:hover {
+            background-color: #ffffff;
+        }
+
+        .reset-button {
+            background-color: #EB6125;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 12px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .zoom-in {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo" onclick="refreshPage()">Travel Hub</div>
+        <div class="nav">
+            <div class="nav-item">
+                <img src="https://www.abhibus.com/assets/svg/train.svg" alt="Train Logo">
+                <a href="http://127.0.0.1:5500/train.html">Trains</a>
+            </div>
+            <div class="nav-item">
+                <img src="https://www.abhibus.com/assets/svg/flight.svg" alt="Flight Logo">
+                <a href="http://127.0.0.1:5500/flight.html">Flights</a>
+            </div>
+            <div class="nav-item">
+                <img src="https://www.abhibus.com/assets/svg/hotel.svg" alt="Hotel Logo">
+                <a href="http://127.0.0.1:5500/hotel.html">Hotels</a>
+            </div>
+            <div class="nav-item">
+                <img src="limited-offer-icon-with-time-countdown-last-minute-limited-offer-with-clock-for-sale-promo-logo-or-banner-or-red-background-label-countdown-of-time-for-offer-sale-or-exclusive-deal-design-vector-remov (1).png" alt="Offers Logo">
+                <a href="#">Offers</a>
+            </div>
+            <div class="nav-item">
+                <img src="images-removebg-preview.png" alt="Login/Signup Logo">
+                <a href="#">Login/SignUp</a>
+            </div>
+        </div>
+    </header>
+    <div class="search-section">
+        <div class="Search_headerCmp__main__TxKrk">
+            <div>
+                <p class="font12 whiteText rubik400">FROM</p>
+                <input type="text" placeholder="Enter source city" class="styles_FswFld__UzC_6">
+            </div>
+            <img src="https://gos3.ibcdn.com/Switch-1664882765.svg" class="appendTop16 zoom-in" alt="switch_icon" onclick="switchStations()">
+            <div>
+                <p class="font12 whiteText rubik400">TO</p>
+                <input type="text" placeholder="Enter destination city" class="styles_FswFld__UzC_6">
+            </div>
+            <div>
+                <p class="font12 whiteText rubik400">DATE</p>
+                <input type="date" class="styles_FswFld__UzC_6">
+            </div>
+            <button class="search-button">Search</button>
+        </div>
+    </div>
+    <div class="filter-results-section">
+        <div class="filter-section">
+            <h4>FILTER BY</h4>
+            <div class="filter-options">
+                <h5>Quick filters</h5>
+                <button class="clear-button">CLEAR ALL</button>
+                <div class="filter-option">
+                    <input type="checkbox" id="available-only">
+                    <label for="available-only">Show available only</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="ac-only">
+                    <label for="ac-only">Show AC only</label>
+                </div>
+                <h5>Quota</h5>
+                <button class="clear-button">CLEAR ALL</button>
+                <div class="filter-option">
+                    <input type="checkbox" id="general">
+                    <label for="general">General</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="ladies">
+                    <label for="ladies">Ladies</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="class">
+                    <label for="class">Class</label>
+                </div>
+                <h5>Class</h5>
+                <button class="clear-button">CLEAR ALL</button>
+                <div class="filter-option">
+                    <input type="checkbox" id="2s">
+                    <label for="2s">2S - Second Sitting</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="cc">
+                    <label for="cc">CC - AC Chair Car</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="sl">
+                    <label for="sl">SL - Sleeper Class</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="3a">
+                    <label for="3a">3A - AC 3 Tier Sleeper</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="2a">
+                    <label for="2a">2A - AC 2 Tier Sleeper</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="1a">
+                    <label for="1a">1A - AC First Class</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="ec">
+                    <label for="ec">EC - Executive Chair Car</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="3e">
+                    <label for="3e">3E - AC 3 Tier Economy</label>
+                </div>
+            </div>
+        </div>
+        <div class="train-results-section">
+            <h4>TRAIN RESULTS</h4>
+            <div class="train-results">
+                <div class="train-result">
+                    <h5>12796 - Bza Intercity</h5>
+                    <p>Runs on: M, T, W, T, F, S, S</p>
+                    <p>Departure: 5:30 am, SC (Secunderabad Jn)</p>
+                    <p>Arrival: 10:30 am, BZA (Vijayawada Jn)</p>
+                    <p>Class: 2S</p>
+                    <p>Price: ₹ 145</p>
+                    <p>Availability: AVL 410</p>
+                    <button class="book-now">Book Now</button>
+                </div>
+                <div class="train-result">
+                    <h5>17016 - Visakha Exp</h5>
+                    <p>Runs on: M, T, W, T, F, S, S</p>
+                    <p>Departure: 4:50 pm, SC (Secunderabad Jn)</p>
+                    <p>Arrival: 10:50 pm, BZA (Vijayawada Jn)</p>
+                    <p>Class: 2A</p>
+                    <p>Price: ₹ 815</p>
+                    <p>Availability: RAC 11</p>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function refreshPage() {
+            window.location.reload();
+        }
+
+        function switchStations() {
+            const fromStation = document.querySelector('input[placeholder="Enter source city"]');
+            const toStation = document.querySelector('input[placeholder="Enter destination city"]');
+            const temp = fromStation.value;
+            fromStation.value = toStation.value;
+            toStation.value = temp;
+        }
+
+        // Add event listeners to filter options
+        document.querySelectorAll('.filter-option input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                // Filter train results based on selected options
+                const selectedOptions = Array.from(document.querySelectorAll('.filter-option input[type="checkbox"]:checked')).map(checkbox => checkbox.id);
+                const trainResults = document.querySelectorAll('.train-result');
+                trainResults.forEach(trainResult => {
+                    const trainResultClasses = trainResult.querySelector('p:nth-child(5)').textContent;
+                    if (selectedOptions.includes(trainResultClasses)) {
+                        trainResult.style.display = 'block';
+                    } else {
+                        trainResult.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Add event listeners to book now buttons
+        document.querySelectorAll('.book-now').forEach(button => {
+            button.addEventListener('click', () => {
+                // Book train ticket
+                alert('Train ticket booked successfully!');
+            });
+        });
+    </script>
+</body>
+</html>
