@@ -49,7 +49,7 @@ Git and GitHub: Version control system and repository hosting service used for m
 ![Screenshot (166)](https://github.com/user-attachments/assets/5a9c38a6-c3ea-48dc-aebd-560f564359d0)
 
 The Sign-Up Page is a crucial component of the Travel Hub website, enabling users to create accounts and start using the services. The page is designed for both usability and security, ensuring users can register easily and safely. With the help of front-end technologies like HTML, CSS, and JavaScript, and back-end technologies like PHP and MySQL, the page provides a seamless experience for new users.
-![Screenshot (165)](https://github.com/user-attachments/assets/3d1cf75b-40ad-4218-95eb-5c58a98512ca)
+![Screenshot (165)](https://github.com/user-attachments/assets/6f05967f-6e32-48e6-9388-411f5d49d2c6)
 Travel Hub - Login Page Description
 This is the login page for the Travel Hub website, designed to provide users with easy access to their travel bookings. The page includes a clean layout with a modern background image showcasing travel destinations.
 
@@ -62,7 +62,7 @@ Forgot Password Link: For password recovery.
 Sign Up Link: For new users to create an account.
 Responsive Design: Ensures the page is mobile-friendly and works on all devices.
 The page is built with HTML, CSS, and JavaScript, ensuring a user-friendly experience and a secure login process.
-![Screenshot (156)](https://github.com/user-attachments/assets/8b9960b2-bc1c-4b0b-9303-9f1672e161a9)
+![Screenshot (156)](https://github.com/user-attachments/assets/7ae57330-0d6a-48eb-afe2-41598f133094)
 Travel Hub - Home Page Description
 The home page of the Travel Hub website is designed to give users a welcoming and intuitive experience while exploring travel destinations. It features a modern layout with essential navigation options and a dynamic presentation of available travel services.
 
@@ -75,7 +75,7 @@ Search Functionality: A search bar to allow users to find specific destinations,
 Featured Packages: A section highlighting special offers or travel packages for users to explore.
 Footer: Includes links to social media, privacy policy, and terms of service.
 The home page is designed with HTML, CSS, and JavaScript to ensure it's responsive and user-friendly on all devices. It provides an engaging introduction to the Travel Hub, helping users navigate easily to their desired travel options.
-![Screenshot (158)](https://github.com/user-attachments/assets/0d0c273f-3486-4c6e-a6ee-ba78d68d325b)
+![Screenshot (157)](https://github.com/user-attachments/assets/cb8280e4-6e75-4975-9026-958c999dc827)
 Travel Hub - Bus Search Feature Description
 The Bus Search feature on the homepage allows users to easily search for available bus routes for their travel plans. This tool helps users find the best bus options based on their travel needs.
 
@@ -86,7 +86,7 @@ Date Picker: Option to select the travel date for accurate results.
 Search Button: A button to submit the search and display available bus routes.
 Results Display: Displays the available bus routes, timings, seat availability, and pricing.
 The Bus Search feature is designed to be intuitive and responsive, allowing users to quickly find and book buses for their travel. This feature is integrated into the homepage for easy access.
-![Screenshot (159)](https://github.com/user-attachments/assets/88540827-8c64-4e99-959c-46222bdcf10c)
+![Screenshot (158)](https://github.com/user-attachments/assets/32f10949-284c-4860-aff2-059cb4e1470a)
 Travel Hub - Train Search Feature on Homepage
 The homepage of Travel Hub includes a Train Search feature, allowing users to easily search for trains based on their origin and destination. This feature is designed to be intuitive, responsive, and quick for users to find their train options.
 
@@ -99,7 +99,7 @@ Train Results: Display a list of available trains with details such as departure
 Filter Options: A side filter section where users can narrow down results based on seat type, train category, and other preferences.
 Responsive Design: The search feature is designed to work seamlessly on desktop, tablet, and mobile devices.
 The Train Search feature makes it easier for users to plan their journeys and book tickets directly through the website.
-![Screenshot (160)](https://github.com/user-attachments/assets/61eb9f8e-80a1-4a79-a87e-3d95cfa11f6f)
+![Screenshot (159)](https://github.com/user-attachments/assets/f8588770-3567-47ee-97bb-7e165e6d9527)
 Travel Hub - Flight Search Feature Description
 The Flight Search feature on the homepage allows users to quickly and easily search for available flights between their chosen departure and destination cities.
 
@@ -118,7 +118,7 @@ Clean, easy-to-use interface with dropdowns or text fields for each input.
 The search section should be prominently placed on the homepage, preferably above the fold, with a background image of flights or travel destinations for a visually appealing experience.
 Responsive design ensuring the feature works seamlessly on both desktop and mobile devices.
 This feature helps users find the best flights, making it an essential part of the homepage, giving them easy access to travel options right away.
-![Screenshot (161)](https://github.com/user-attachments/assets/93bb1102-8c67-4bec-8c85-dabbc99df6b1)
+![Screenshot (160)](https://github.com/user-attachments/assets/f887f40b-2ad9-4ad0-8ea4-74df1b9fa2ce)
 Travel Hub - Hotel Search on Home Page
 The homepage of the Travel Hub website includes a Hotel Search feature that allows users to easily find and book hotels at their desired travel destinations. This section is designed to be simple and user-friendly.
 
@@ -132,6 +132,8 @@ Hotel Listings: After the search, users will see a list of hotels with details l
 The hotel search section is designed to be responsive and will adjust to all screen sizes, ensuring a seamless experience on both mobile and desktop devices. The front-end is built using HTML, CSS, and JavaScript, while the back-end handles the hotel search functionality with PHP and MySQL (if applicable).
 Travel Hub - Overview
 Travel Hub is a user-friendly online platform designed to simplify travel planning. The website offers a seamless experience for users to search for hotels, book accommodations, and manage travel details. With a clean and responsive design, Travel Hub ensures that users can easily navigate through different sections like hotel search, bookings, and account management.
+![Screenshot (161)](https://github.com/user-attachments/assets/3693198d-301f-4ae5-8dc0-c40c5bf48955)
+
 
 Key features include:
 
